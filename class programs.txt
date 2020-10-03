@@ -1,0 +1,159 @@
+#Jagged Array
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace jaggedarray
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            Console.WriteLine("Jagged array in c# programming");
+            //declare array of 5 elements
+            //jaggedarray is array.whose elements are the array within it.it means array within array
+            int[][] jaggedarray = new int[5][];
+            jaggedarray[0] = new int[2] { 2, 4 };//index of jaggedarray with size[2]
+            jaggedarray[1] = new int[4] { 12,24,36,48 };
+            jaggedarray[2] = new int[3] { 2,4,6};
+            jaggedarray[3] = new int[5] { 20, 40 ,60,80,100};
+            jaggedarray[4] = new int[5] { 3, 6,9,12,36 };
+            //display elements of an array
+            for (i = 0; i < jaggedarray.Length; i++)
+            {
+                Console.WriteLine("Element of {0} is:", i);//trying to find elements of array
+                for (int j = 0; j < jaggedarray[i].Length; j++)
+                { 
+                    Console.WriteLine(jaggedarray[i][j]+"\t");
+                }
+              
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+
+#File Handling-StreamReader & StreamWriter
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+//c# is class oriented programming
+namespace FileHandling
+{
+    class fileexample
+    {
+        class writeTofile
+        {
+            public void data()
+            {
+                //this will create a file named sample.txt from local machine
+                //StreamWriter "name" =new StreamWriter("location of file");
+                //path:C:\Kavya\Assignments\Assignments submitted folder
+                StreamWriter sw = new StreamWriter("C:\\Kavya\\Assignments\\Assignments submitted folder\\sample.txt");
+                //to write on the console screen
+                Console.WriteLine("Enter what text has to displayed on the file");
+                //to read the input from the user
+                string str = Console.ReadLine();//my name is kavya
+                //to write a line in the file
+                sw.WriteLine(str);
+                //to write the output stream
+                sw.Flush();
+                //we need to close the stream
+                sw.Close();
+            }
+            //demonstrating streamreader in c#
+            //it reads the next set of characters from the input screen
+            //driver code/main method
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    //file handling in c#
+                    writeTofile wr = new writeTofile();//instantiating the class writetofile
+                    wr.data();
+                    Console.ReadKey();
+                    FileStream fs = new FileStream("C:\\Kavya\\Assignments\\Assignments submitted folder\\sample.txt",FileMode.OpenOrCreate);
+                    StreamReader sr = new StreamReader(fs);
+                    string lines = sr.ReadLine();//trying to read lines its existing
+                    Console.WriteLine(lines);
+                    sr.Close();//closing stream reader
+                    fs.Close();//closing file
+                    Console.ReadLine();
+                }
+            }
+        }
+    }
+}
+
+
+#Class Property
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassProperty1
+{
+
+    class person
+    {
+        //private string name;
+
+        public string Name
+        { 
+           get; set; 
+        }
+        //driver code
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                person list = new person();
+                list.Name = "kavya";
+                Console.WriteLine(list.Name);
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+#Create Directory
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CreateDirectory
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var currentDirectory = Directory.GetCurrentDirectory();
+            Console.WriteLine(currentDirectory);
+            Console.WriteLine(Directory.GetDirectoryRoot(currentDirectory));//to find current root directory
+            var documentpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var directoryname = $@"{documentpath}\test";
+            DirectoryInfo dif = Directory.CreateDirectory(directoryname);
+            Console.WriteLine($"complete name of the directory:{ dif.FullName},Name:{dif.Name},parent:{dif.Parent} ");
+            Console.ReadKey();
+        }
+    }
+}
+
+
