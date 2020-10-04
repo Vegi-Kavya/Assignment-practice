@@ -1,0 +1,344 @@
+practice:
+
+#create directory:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CreateDirectory1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var currentDirectory1 = Directory.GetCurrentDirectory();
+            Console.WriteLine(currentDirectory1);
+            Console.WriteLine(Directory.GetDirectoryRoot(currentDirectory1));//to find current root directory
+            var docpath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var dirname = $@"{docpath}\example";
+            DirectoryInfo din = Directory.CreateDirectory(dirname);
+            Console.WriteLine($"complete name of the directory:{ din.FullName},Name:{din.Name},parent:{din.Parent} ");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CreateDirectory2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var curdir2 = Directory.GetCurrentDirectory();
+            Console.WriteLine(curdir2);
+            Console.WriteLine(Directory.GetDirectoryRoot(curdir2));
+            var docpath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+            var dirname = $@"{docpath}\directory";
+            DirectoryInfo dinfo = Directory.CreateDirectory(dirname);
+            Console.WriteLine($"enter the full name of directory: {dinfo.FullName},Name:{dinfo.Name},parent:{dinfo.Parent} ");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+#file Handliung
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace File_Handling3
+{
+    class writeTofile
+    {
+        public void display()
+        {
+             StreamWriter sw = new StreamWriter("C:\\Kavya\\Assignments\\Assignments submitted folder\\stream.txt");   
+             Console.WriteLine("Enter what text has to displayed on the file"); 
+             string str = Console.ReadLine();
+             sw.WriteLine(str); 
+             sw.Flush();  
+             sw.Close();
+        }
+           
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                writeTofile wr = new writeTofile();
+                wr.display();
+                Console.ReadKey();
+                FileStream fs = new FileStream("C:\\Kavya\\Assignments\\Assignments submitted folder\\stream.txt", FileMode.OpenOrCreate);
+                StreamReader sr = new StreamReader(fs);
+                string line = sr.ReadLine();
+                Console.WriteLine(line);
+                sr.Close();
+                fs.Close();
+                Console.ReadLine();
+            }
+        }
+    }
+    
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace Filehandling1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StreamWriter sw = new StreamWriter(@"c://Kavya//Assignments//Assignments submitted folder//example.txt");
+            Console.WriteLine("Enter what text to be displayed");
+            string str = Console.ReadLine();
+            sw.WriteLine(str);
+            sw.Flush();
+            sw.Close();
+            FileStream fs = new FileStream(@"c://Kavya//Assignments//Assignments submitted folder//example.txt",FileMode.OpenOrCreate);
+            StreamReader sr = new StreamReader(fs);
+            string line = sr.ReadLine();
+            Console.WriteLine(line);
+            sr.Close();
+            Console.ReadLine();
+            Console.ReadKey();
+            
+        }
+    }
+}
+
+
+Class property
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassProperty
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            person obj = new person();//crate an object for class person
+            //assign value to class property
+            obj.Name = "kavya";
+            obj.Age = 21;
+            obj.Email = "kavyavegi4@gmail.com";
+            obj.Mobile = 9542382133;
+            obj.Aadharnumber = 442690150345;
+            obj.Pannumber="67jkl82";
+            Console.WriteLine(obj.Name);
+            Console.WriteLine(obj.Email);
+            Console.WriteLine(obj.Mobile);
+            Console.WriteLine(obj.Age);
+            Console.WriteLine(obj.Pannumber);
+            Console.WriteLine(obj.Aadharnumber);
+            Console.ReadKey();
+        }
+    }
+    class person
+    {
+        private string name;//property
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        private int age;//property
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+        private double mobilenumber;//property
+        public double Mobile
+        {
+            get { return mobilenumber; }
+            set { mobilenumber = value; }
+        }
+        private string email;//property
+        public string Email
+        {
+            get { return email; }
+            set { email= value; }
+        }
+        private double aadharnumber;//property
+        public double Aadharnumber
+        {
+            get { return aadharnumber; }
+            set { aadharnumber = value; }
+        }
+        private string pannumber;//property
+        public string Pannumber
+        {
+            get { return pannumber; }
+            set { pannumber = value; }
+        }
+
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Classproperty2
+{
+    class subjects
+    {
+        private int telugu;
+        public int Telugu
+        {
+            get { return telugu; }
+            set { telugu = value; }
+        }
+        private int english;
+        public int English
+        {
+            get { return english; }
+            set { english = value; }
+        }
+        private int maths;
+        public int Maths
+        {
+            get { return maths; }
+            set { maths = value; }
+        }
+        private int physics;
+        public int Physics
+        {
+            get { return physics; }
+            set { physics = value; }
+        }
+        private int social;
+        public int Social
+        {
+            get { return social; }
+            set { social = value; }
+        }
+        private double total;
+        public double Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            subjects s = new subjects();
+            s.Telugu = 90;
+            s.English = 95;
+            s.Maths = 100;
+            s.Physics = 98;
+            s.Social = 97;
+            s.Total = s.Telugu + s.English + s.Maths + s.Physics + s.Social;
+            Console.WriteLine("Telugu Marks: {0}",s.Telugu);
+            Console.WriteLine("English Marks: {0}", s.English);
+            Console.WriteLine("Maths Marks: {0}", s.Maths);
+            Console.WriteLine("Physics Marks: {0}", s.Physics);
+            Console.WriteLine("Social Marks: {0}", s.Social);
+            Console.WriteLine("Total Marks: {0}", s.Total);
+            Console.ReadKey();
+        }
+    }
+}
+
+
+Jagged Array
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JaggedArray1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i,j;
+            int[][] jaggedarray = new int[3][];
+            Console.WriteLine("Example of jagged array");
+            jaggedarray[0] = new int[2] { 2, 4 };
+            jaggedarray[1] = new int[3] { 3, 6,9 };
+            jaggedarray[2] = new int[4] { 4, 8,12,16 };
+            for(i=0;i<jaggedarray.Length; i++)
+            {
+                Console.WriteLine("Elements of array is: {0}", i);
+                for (j = 0; j< jaggedarray[i].Length; j++)
+                {
+                   Console.WriteLine(jaggedarray[i][j]);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JaggedArray2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            int[][] array = new int[4][];
+            //jagged Array
+            array[0] = new int[3] { 1, 2, 3 };
+            array[1] = new int[1] { 4 };
+            array[2] = new int[4] { 5, 6, 7,8 };
+            array[3] = new int[2] { 9,10};
+            for (i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Element of jagged array {0} is:",i);
+
+                for (j = 0; j < array[i].Length; j++)
+                {
+                    Console.WriteLine(array[i][j]);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+
