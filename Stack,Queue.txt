@@ -1,0 +1,172 @@
+Queue-assignment1
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Queue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Queue");
+            Queue<Int32> myqueue = new Queue<int>();
+            myqueue.Enqueue(2);
+            myqueue.Enqueue(4);
+            myqueue.Enqueue(6);
+            myqueue.Enqueue(8);
+            myqueue.Enqueue(10);
+            myqueue.Enqueue(12);
+            myqueue.Enqueue(14);
+            myqueue.Enqueue(16);
+            myqueue.Enqueue(18);
+            myqueue.Enqueue(20);
+            Console.WriteLine("elements in queue are:");
+            foreach (int queue in myqueue)
+            {
+                Console.WriteLine("elements are:" + queue);
+            }
+            Console.WriteLine("After dequeue elements from queue"+ myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("After dequeue elements from queue" + myqueue.Dequeue());
+            Console.WriteLine("The left of elements in queue are:");
+            foreach (int queue in myqueue)
+            {
+                Console.WriteLine("elements are:" + queue);
+            }
+            Console.WriteLine("The peek element of the queue is:{0}", myqueue.Peek());
+            Console.WriteLine("The no.of element in the queue is:{0}", myqueue.Count());
+            Console.WriteLine("The element exist in the queue is:{0}", myqueue.Contains(20));
+            Console.WriteLine("The element exist in the queue is:{0}", myqueue.Contains(12));
+            Console.ReadKey();
+        }
+    }
+}
+
+
+Queue-Assignment2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Queue1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<Int32> q = new Queue<Int32>();
+            q.Enqueue(2);
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(2));
+            q.Enqueue(4);
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(4));
+            q.Enqueue(6);
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(6));
+            q.Enqueue(8);
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(8));
+            q.Enqueue(10);
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(10));
+            Console.WriteLine("The list of elements in queue are:");
+            foreach (int x in q)
+            {
+                Console.WriteLine("elements of queue are:" + x);
+            }
+            Console.WriteLine("pop element of queue is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(10));
+            Console.WriteLine("pop element of queue is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(8));
+            Console.WriteLine("pop element of stack is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(6));
+            Console.WriteLine("pop element of stack is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(4));
+            Console.WriteLine("pop element of queue is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + q.Count());
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(2));
+            Console.WriteLine("The list of elements in queue are:");
+            foreach (int x in q)
+            {
+                Console.WriteLine("elements of queue are:" + x);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+Stack-Assignment2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace stack
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<Int32> s = new Stack<Int32>();
+            s.Push(2);
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(2));
+            s.Push(4);
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(4));
+            s.Push(6);
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(6));
+            s.Push(8);
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(8));
+            s.Push(10);
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(10));
+            Console.WriteLine("The elements in stack are:");
+            foreach (int x in s)
+            {
+                Console.WriteLine("elements of stack are:" + x);
+            }
+            Console.WriteLine("pop element of stack is:" + s.Pop());
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(10));
+            Console.WriteLine("pop element of stack is:" + s.Pop());
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(8));
+            Console.WriteLine("pop element of stack is:" + s.Pop());
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(6));
+            Console.WriteLine("pop element of stack is:" + s.Pop());
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:" + s.Contains(4));
+            Console.WriteLine("pop element of stack is:" + s.Pop());
+            Console.WriteLine("The no.of elements in stack are:" + s.Count());
+            Console.WriteLine("The elements exist in stack is:"+s.Contains(2));
+            Console.WriteLine("The elements in stack are:" );
+            foreach (int x in s)
+            {
+                Console.WriteLine("elements of stack are:" + x);
+            }
+            Console.ReadKey();
+        }
+    }
+}
