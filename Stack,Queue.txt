@@ -88,19 +88,19 @@ namespace Queue1
             }
             Console.WriteLine("pop element of queue is:" + q.Dequeue());
             Console.WriteLine("The no.of elements in queue are:" + q.Count());
-            Console.WriteLine("The elements exist in queue is:" + q.Contains(10));
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(2));
             Console.WriteLine("pop element of queue is:" + q.Dequeue());
             Console.WriteLine("The no.of elements in queue are:" + q.Count());
-            Console.WriteLine("The elements exist in queue is:" + q.Contains(8));
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(4));
             Console.WriteLine("pop element of stack is:" + q.Dequeue());
             Console.WriteLine("The no.of elements in queue are:" + q.Count());
             Console.WriteLine("The elements exist in queue is:" + q.Contains(6));
             Console.WriteLine("pop element of stack is:" + q.Dequeue());
             Console.WriteLine("The no.of elements in queue are:" + q.Count());
-            Console.WriteLine("The elements exist in queue is:" + q.Contains(4));
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(8));
             Console.WriteLine("pop element of queue is:" + q.Dequeue());
             Console.WriteLine("The no.of elements in queue are:" + q.Count());
-            Console.WriteLine("The elements exist in queue is:" + q.Contains(2));
+            Console.WriteLine("The elements exist in queue is:" + q.Contains(10));
             Console.WriteLine("The list of elements in queue are:");
             foreach (int x in q)
             {
