@@ -10,7 +10,7 @@ namespace SingleThread
     public delegate string Thread2Delegate();
     class Program
     {
-        public static string Thread1()
+        public string Thread1()
         {
             for (int i = 1; i < 10; i++)
             {
@@ -19,7 +19,7 @@ namespace SingleThread
             }
             return "Thread1 is got exit";
         }
-        public static string Thread2()
+        public string Thread2()
         {
             for (int i = 1; i < 10; i++)
             {
@@ -35,17 +35,12 @@ namespace SingleThread
 
             return "Thread2 is got exit ";
         }
-        public static string Thread3()
-        {
-            return "Thread3 is started";
-        }
         static void Main(string[] args)
         {
-            //Program obj1 = new Program();
-            Thread1Delegate obj = new Thread1Delegate(Thread1);
+            Program obj2 = new Program();
+            Thread1Delegate obj = new Thread1Delegate(obj2.Thread1);
             string result = obj.Invoke();
-            //Console.WriteLine(result);
-            Thread2Delegate obj1 = new Thread2Delegate(Thread2);
+            Thread2Delegate obj1 = new Thread2Delegate(obj2.Thread2);
             string result1 = obj1.Invoke();
             Console.ReadKey();
         }
