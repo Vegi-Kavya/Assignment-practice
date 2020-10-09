@@ -36,10 +36,6 @@ namespace MultiThreading
 
             return "Thread2 got exit ";
         }
-        public static string Thread3()
-        {
-            return "Thread3 is started";
-        }
         static void Main(string[] args)
         {
             Program obj = new Program();
