@@ -34,10 +34,6 @@ namespace SingleThreading
 
             return "Thread2 is got exit ";
         }
-        public static string Thread3()
-        {
-            return "Thread3 is started";
-        }
         static void Main(string[] args)
         {
             Program p = new Program();
