@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Javascript Examples</title>
+<style type="text/css">
+body {
+background-color: sky-blue;
+}
+</style>
+</head>
+<body>
+<h1>My name is Kavya</h1>
+<h1 id='hid'>My name is Kavya</h1>
+<h2 id='hid2'>Welcome to javascript</h2>
+<img src="download.jpg" width="500" height="500" id='img1'>
+<button onclick="f1()">Clickme</button>
+<button onclick="changecontent()">Change the Content</button>
+<button onclick="changeImageSize()">Resize the image</button>
+<button onclick="hide()">Click me to hide</button>
+<button onclick="changeBackground()">Click me to change background</button>
+<script type="text/javascript">
+function f1(){
+window.alert("Hi you have clicked the button");
+}
+function changecontent(){
+document.getElementById('hid').innerHTML="Hi my name is tom";
+}
+function changeImageSize(){
+document.getElementById('img1'). width="100";
+}
+function hide(){
+document.getElementById('hid'). style.backgroundColor="pink";
+}
+function changeBackground(){
+document.getElementById('hid2'). style.display='none';
+}
+</script>
+</body>
+</html>
