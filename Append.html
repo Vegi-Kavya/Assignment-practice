@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b>provided by dxc technology</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Javascript</li>");
+    });
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("p").prepend("<b>Prepended text</b>. ");
+        });
+        $("#btn2").click(function () {
+            $("ol").prepend("<li>Prepended item</li>");
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <p>This is .net training</p>
+    <p>This is consist of following</p>
+
+    <ol>
+        <li>csharp</li>
+        <li>HTML</li>
+        <li>Bootstrap</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list items</button>
+
+</body>
+</html>
