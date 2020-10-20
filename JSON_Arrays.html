@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Json Arrays</title>
+</head>
+<body>
+    <p>Access an array value of a JSON object</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var Obj, x;
+        Obj = { "name": "Kavya", "age": 21, "friends": ["Jerry", "Samyu", "Neelu", "Vasantha"] };
+        x = Obj.friends[1];
+        document.getElementById("demo").innerHTML = x;
+        var Obj1, x1, i;
+        Obj1 = { "name": "Kavya", "age": 21, "friends": ["Jerry", "Samyu", "Neelu", "Vasantha"] };
+        for (i in Obj1.friends) {
+            x1 += Obj1.friends[i] + " <br>";
+        }
+        document.getElementById("demo1").innerHTML = x1;
+     </script>
+</body>
+</html>
