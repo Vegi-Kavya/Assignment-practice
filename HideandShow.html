@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+  $(document).ready(function(){
+      $("#hide").click(function () {
+
+          $("h1").hide();
+          $("h2").hide();
+          $("p").hide();
+      });
+  
+      $("#show").click(function(){
+
+         $("h1").show();
+         $("h2").show();
+         $("p").show();
+      });
+  });
+    </script>
+</head>
+<body>
+    <h1>This is hide Example</h1>
+    <h2>This is show example</h2>
+    <p>If you click on the Hide button, I will disappear</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+</body>
+</html>
