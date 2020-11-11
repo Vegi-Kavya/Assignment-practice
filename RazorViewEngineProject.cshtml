@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>This is single line expression</h2>
+        <h2>Addition of 10,20 and 30 is:@(10 + 20 + 30)</h2>
+    </div>
+    <div>
+        <h2>Thi is multi line expression</h2>
+        @{
+            var a = 10;
+            var b = 20;
+            var c = 30;
+            var d = a * b * c;
+            <h2>The value of d is:@d</h2>
+        }
+    </div>
+    <div>
+        <h2>Example of If and Terinary</h2>
+        @{
+            var e = 5;
+        }
+        @if (e == 5)
+        {
+            <h2>Both are equal</h2>
+        }
+        else
+        {
+            <h2>Both are not equal</h2>
+        }
+        <h2>@(e % 2 == 0 ? "e is even" : "e is odd")</h2>
+    </div>
+    <h2>For Example</h2>
+    <div>
+        @for (int i = 100; i <= 105; i++)
+        {
+            <h2>The numbers are:@i</h2>
+        }
+    </div>
+    <h2>Foreach Example</h2>
+    <div>
+        @{
+            var numbers = new List<Int32>() { 200, 210, 220, 230, 240, 250 };
+        }
+        @foreach (var num in numbers)
+        {
+            <h2>The numbers are:@num</h2>
+        }
+    </div>
+</body>
+</html>
