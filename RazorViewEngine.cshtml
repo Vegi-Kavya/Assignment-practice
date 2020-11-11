@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>This is single line razor expression</h1><br />
+        <h2>concatination of kavya and madhu is:@("kavya" + "madhu")</h2>
+    </div>
+    <div>
+        <h1>This is multi line razor expression</h1><br />
+        @{
+            var a = "Vegi ";
+            var b = "Kavya ";
+            var c = "Kanaka Mahalakshmi";
+        }
+        <h2>Concat of a,b,c is:@(a + b + c)</h2>
+    </div>
+    <h2>Example of If</h2>
+    <div>
+        @{
+            var d = "Kavya";
+            var e = "Madhu";
+        }
+    </div>
+    <div>
+        @if (d == e)
+        {
+            <h2>Both are equal</h2>
+        }
+        else
+        {
+            <h2>Both are not equal</h2>
+        }
+    </div>
+    <h2>Example of Foreach</h2>
+    <div>
+        @{
+            var list = new List<string>() { "kavya", "vegi" };
+        }
+    </div>
+    <div>
+        @foreach (var names in list)
+        {
+            <h2>The name present in list or not:@names.Contains("vegi")</h2>
+        }
+    </div>
+    <h2>Example of Terinary operator</h2>
+    <div>
+        <h2>
+            @(d == "Kavya" ? "Both are equal" : "Both are not equal");<br />
+            @(e == "Kavya" ? "Both are equal" : "Both are not equal");<br />
+        </h2>
+    </div>
+    <h2>Example of For</h2>
+    <div>
+        @for (char i = 'a'; i <= 'e'; i++)
+        {
+            <h2>The letters are:@i</h2>
+        }
+    </div>
+        
+</body>
+</html>
