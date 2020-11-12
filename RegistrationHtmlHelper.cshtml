@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <div> Username:@Html.TextBox("textbox1")</div><br />
+        <div>Password:@Html.Password("pwd")</div><br />
+        <div>Gender:</div>
+        <div>@Html.RadioButton("Gender","Male", true, new { id = "Male" })Male
+        @Html.RadioButton("Gender","Female", true, new { id = "Female" })Female</div><br />
+        <div>Address:@Html.TextArea("textarea")</div><br />
+        <div>Seleect Hobbies:@Html.DropDownList("Hobbies",new List<SelectListItem>{
+            new SelectListItem{Text="Singing", Value="1",Selected=true },
+            new SelectListItem{Text="Dancing", Value="2",Selected=true },
+            new SelectListItem{Text="Playing", Value="3",Selected=true },
+            new SelectListItem{Text="Select Hobbies", Value="4",Selected=true }
+        }, "Drawing")</div><br />
+        <div>Select Courses:@Html.DropDownList("Courses", new List<SelectListItem> {
+            new SelectListItem{Text="C Programming", Value="1",Selected=true },
+            new SelectListItem{Text="C# Programming", Value="2",Selected=true },
+            new SelectListItem{Text="Java Programming", Value="3",Selected=true },
+            new SelectListItem{Text="Select Course", Value="4",Selected=true }
+        }, "Python Programming")</div><br />
+        <div>Select Skills:@Html.DropDownList("Skills", new List<SelectListItem> {
+            new SelectListItem{Text="Communication Skill", Value="1",Selected=true },
+            new SelectListItem{Text="Select Skills", Value="2",Selected=true }
+        }, "Programming Skills")</div><br />
+        <div><input type="submit" value="Register" /></div>
+     </div>
+</body>
+</html>
