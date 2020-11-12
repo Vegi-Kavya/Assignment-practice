@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+            <div><h2>This is Example Page</h2></div>
+            <div>Username:@Html.TextBox("textbox1")</div><br />
+            <div>Password:@Html.Password("pwd")</div><br />
+            <div>Gender:</div><br />
+            <div>
+                @Html.RadioButton("Gender", "Male", true, new { id = "Male" })Male
+            @Html.RadioButton("Gender", "Femmale", true, new { id = "Male" })Female
+            </div><br />
+            <div>Address:@Html.TextArea("textarea")</div><br />
+            <div>Select Course:@Html.DropDownList("Courses",new List<SelectListItem> {
+                new SelectListItem{Text="C Programming",Value="1",Selected=true},
+                new SelectListItem{Text="R Programming",Value="2",Selected=true},
+                new SelectListItem{Text="Java Programming",Value="3",Selected=true},
+                new SelectListItem{Text="C# Programming",Value="4",Selected=true},
+                new SelectListItem{Text="Select Course",Value="5",Selected=true},
+                })
+            </div><br />
+            <div>
+            Select Branch:@Html.ListBox("Branch",new List<SelectListItem> {
+                new SelectListItem{Text="CSE",Value="1",Selected=true},
+                new SelectListItem{Text="ECE",Value="2",Selected=true},
+                new SelectListItem{Text="EEE",Value="3",Selected=true},
+                new SelectListItem{Text="IT",Value="4",Selected=true},
+                new SelectListItem{Text="Select Branch",Value="5",Selected=true},
+                },new { @class="form-control"})
+            </div><br />
+            <div><label>@Html.Display("emp")</label></div><br />
+            <div>Accept terms and conditions:@Html.CheckBox("checkbox")</div><br />
+            <div>@Html.ActionLink("clickme", "Index")</div>
+        </div>
+    </body>
+</html>
