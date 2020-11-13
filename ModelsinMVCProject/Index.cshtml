@@ -1,0 +1,40 @@
+﻿@model ModelsinMVC.Models.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    EmpID
+                </td>
+                <td>
+                    @Model.EmpID
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    EmpName
+                </td>
+                <td>
+                    @Model.EmpName
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Salary
+                </td>
+                <td>
+                    @Model.Salary
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
