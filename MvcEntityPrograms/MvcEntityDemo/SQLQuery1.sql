@@ -1,0 +1,1 @@
+﻿insert into ProductTable values(101,'Desktop-Computer',45000.0000)
