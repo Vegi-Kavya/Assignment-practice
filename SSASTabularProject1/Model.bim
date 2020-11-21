@@ -1,0 +1,89 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-IN",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-QGCIGIOMSSQLSERVER01 EmployeeInformation",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-QGCIGIO\\MSSQLSERVER01;Initial Catalog=EmployeeInformation;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "EmployeeInformation",
+        "columns": [
+          {
+            "name": "EmployeeId",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EmployeeName",
+            "dataType": "string",
+            "sourceColumn": "EmployeeName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DOB",
+            "dataType": "string",
+            "sourceColumn": "DOB",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Designation",
+            "dataType": "string",
+            "sourceColumn": "Designation",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "EmployeeInformation",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[EmployeeInformation].* FROM [dbo].[EmployeeInformation] ",
+              "dataSource": "SqlServer DESKTOP-QGCIGIOMSSQLSERVER01 EmployeeInformation"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[EmployeeInformation].* FROM [dbo].[EmployeeInformation] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "EmployeeInformation"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
