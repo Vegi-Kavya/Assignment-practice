@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DataSource1">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=DESKTOP-QGCIGIO\MSSQLSERVER01;Initial Catalog=EmployeeInformation</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>50fc0a2d-8230-4cbd-9bcd-c278f459ccf8</DataSourceID>
+</RptDataSource>
