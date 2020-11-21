@@ -1,0 +1,82 @@
+{
+  "name": "SSASTabularProject",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-IN",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-QGCIGIOMSSQLSERVER01 StudentInfo",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-QGCIGIO\\MSSQLSERVER01;Initial Catalog=StudentInfo;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "StudentInfo",
+        "columns": [
+          {
+            "name": "StudentId",
+            "dataType": "int64",
+            "sourceColumn": "StudentId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "StudentName",
+            "dataType": "string",
+            "sourceColumn": "StudentName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Marks",
+            "dataType": "double",
+            "sourceColumn": "Marks",
+            "sourceProviderType": "Single"
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "StudentInfo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[StudentInfo].* FROM [dbo].[StudentInfo] ",
+              "dataSource": "SqlServer DESKTOP-QGCIGIOMSSQLSERVER01 StudentInfo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[StudentInfo].* FROM [dbo].[StudentInfo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "StudentInfo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

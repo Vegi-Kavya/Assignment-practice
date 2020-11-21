@@ -1,0 +1,7 @@
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\bin\Model.asdatabase
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\bin\Model.deploymenttargets
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\bin\Model.deploymentoptions
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\obj\Development\SSASTabularProject.smproj.CoreCompileInputs.cache
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\obj\Development\Model.asdatabase
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\obj\Development\Model.deploymentoptions
+C:\Users\V K K Mahalakshmi\source\repos\SSASTabularProject\SSASTabularProject\obj\Development\Model.deploymenttargets
