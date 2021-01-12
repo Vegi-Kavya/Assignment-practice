@@ -7,17 +7,24 @@
     <script>
 $(document).ready(function(){
   $("#hide").click(function(){
-    $("p").hide();
+     
+      $("h1").hide();
+      $("h2").hide();
+      //$("p").hide();
   });
   $("#show").click(function(){
-    $("p").show();
+     
+      $("h1").show();
+      $("h2").show();
+      //$("p").show();
   });
 });
     </script>
 </head>
 <body>
-    <p>If you click on the "Hide" button, I will disappear.</p>
-
+    <h1>This is hide Example</h1>
+    <h2>This is show example</h2>
+    <!--<p>If you click on the Hide button, I will disappear</p>-->
     <button id="hide">Hide</button>
     <button id="show">Show</button>
 </body>
