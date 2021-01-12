@@ -1,0 +1,7 @@
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\bin\Debug\ActionFuncDelegate.exe.config
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\bin\Debug\ActionFuncDelegate.exe
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\bin\Debug\ActionFuncDelegate.pdb
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\obj\Debug\ActionFuncDelegate.csprojAssemblyReference.cache
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\obj\Debug\ActionFuncDelegate.csproj.CoreCompileInputs.cache
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\obj\Debug\ActionFuncDelegate.exe
+C:\Users\V K K Mahalakshmi\source\repos\ActionFuncDelegate\ActionFuncDelegate\obj\Debug\ActionFuncDelegate.pdb

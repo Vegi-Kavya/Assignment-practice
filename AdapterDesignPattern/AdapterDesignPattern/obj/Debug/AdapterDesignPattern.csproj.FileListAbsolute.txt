@@ -1,0 +1,6 @@
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\bin\Debug\AdapterDesignPattern.exe.config
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\bin\Debug\AdapterDesignPattern.exe
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\bin\Debug\AdapterDesignPattern.pdb
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\obj\Debug\AdapterDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\obj\Debug\AdapterDesignPattern.exe
+C:\Users\V K K Mahalakshmi\source\repos\AdapterDesignPattern\AdapterDesignPattern\obj\Debug\AdapterDesignPattern.pdb
