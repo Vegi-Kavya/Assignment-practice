@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sliding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown(5000);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#flip1").click(function () {
+                $("#panel1").slideDown(5000);
+            });
+        });
+    </script>
+    
+    <style>
+        #flip, #panel {
+            background-color: aqua;
+            text-align: center;
+            padding: 10px;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+        #flip1, #panel1 {
+            background-color: lightcoral;
+            text-align: center;
+            padding: 10px;
+        }
+        #panel1 {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click to slidedown panel</div>
+    <div id="panel">Programming is fun</div>
+    <div id="flip1">This is another example</div>
+    <div id="panel1">Programming is really fun</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    $("button").click(function () {
+        //        $("div").animate({top:'100px'});
+        //    });
+        //});
+        //$(document).ready(function () {
+        //    $("button").click(function () {
+        //        $("div").animate({ right: '100px' });
+        //    });
+        //});
+        //$(document).ready(function () {
+        //    $("button").click(function () {
+        //        $("div").animate({ bottom: '100px' });
+        //    });
+        //});
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: '100px',
+                    height: '250px',
+                    width:'350px'
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    height: 'toggle',
+                    width:'toggle'
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("img").animate({
+                    height: '50px',
+                    width: '50px'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Start animation</button>
+    <div style="background-color:aqua;width:50px;height:50px;position:absolute"></div>
+    <button>one more</button>
+    <div style="background-color:lightcoral;width:50px;height:50px;position:absolute"></div>
+    <button>check img</button>
+    <img src="cute.jpg">cute girl<img />
+</body>
+</html>
